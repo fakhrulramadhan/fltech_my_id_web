@@ -7,9 +7,11 @@ git push origin main
 Di VPS cukup:
 
 cd /var/www/fltech.my.id
+sudo chown -R ubuntu:ubuntu /var/www/fltech.my.id
 sudo git pull origin main
 
 Kalau mau lebih profesional lagi, saya sarankan buat branch:
 
 main        -> production (VPS)
 development -> tempat ngoding
+
