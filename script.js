@@ -1,10 +1,1 @@
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => navLinks.classList.remove("active"));
-});
+const menuBtn=document.getElementById("menuBtn");const navLinks=document.getElementById("navLinks");const contactForm=document.getElementById("contactForm");const submitBtn=document.getElementById("submitBtn");const formStatus=document.getElementById("formStatus");menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("active")});document.querySelectorAll(".nav-links a").forEach(link=>{link.addEventListener("click",()=>navLinks.classList.remove("active"))});contactForm.addEventListener("submit",async event=>{event.preventDefault();formStatus.textContent="";formStatus.className="form-status";submitBtn.disabled=true;submitBtn.textContent="Mengirim...";const formData=new FormData(contactForm);const payload=Object.fromEntries(formData.entries());try{const response=await fetch("http://localhost:3001/api/leads",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});const result=await response.json();if(!response.ok){throw new Error(result.message||"Gagal mengirim data.")}contactForm.reset();formStatus.textContent="Terima kasih. Pesan Anda berhasil dikirim.";formStatus.classList.add("success")}catch(error){formStatus.textContent=error.message||"Terjadi kesalahan. Silakan coba lagi.";formStatus.classList.add("error")}finally{submitBtn.disabled=false;submitBtn.textContent="Kirim Konsultasi"}});

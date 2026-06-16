@@ -32,7 +32,7 @@
             aplikasi mobile, sistem informasi, backend API, dashboard admin, hingga deployment ke server.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn primary">Konsultasi Sekarang</a>
+            <a href="#contact" class="btn primary">Konsultasi Project</a>
             <a href="#portfolio" class="btn secondary">Lihat Portfolio</a>
           </div>
           <div class="stats">
@@ -65,30 +65,12 @@
           <h2>Solusi digital untuk kebutuhan bisnis Anda</h2>
         </div>
         <div class="cards">
-          <article class="service-card">
-            <h3>Website Profesional</h3>
-            <p>Landing page, company profile, portfolio, dan website bisnis yang cepat, responsif, dan SEO friendly.</p>
-          </article>
-          <article class="service-card">
-            <h3>Aplikasi Mobile</h3>
-            <p>Pembuatan aplikasi Android/iOS menggunakan Flutter dengan tampilan modern dan integrasi REST API.</p>
-          </article>
-          <article class="service-card">
-            <h3>Sistem Informasi</h3>
-            <p>Dashboard admin, sistem akademik, HRIS, POS, e-commerce, approval system, dan sistem internal perusahaan.</p>
-          </article>
-          <article class="service-card">
-            <h3>Backend API</h3>
-            <p>Pengembangan API menggunakan Laravel atau Golang, autentikasi, database, upload file, dan dokumentasi endpoint.</p>
-          </article>
-          <article class="service-card">
-            <h3>Deployment Server</h3>
-            <p>Setup VPS, Nginx, SSL, domain, database, CI/CD sederhana, dan publikasi aplikasi ke server production.</p>
-          </article>
-          <article class="service-card">
-            <h3>Maintenance</h3>
-            <p>Perbaikan bug, optimasi performa, update fitur, backup data, dan pendampingan teknis setelah aplikasi berjalan.</p>
-          </article>
+          <article class="service-card"><h3>Website Profesional</h3><p>Landing page, company profile, portfolio, dan website bisnis yang cepat, responsif, dan SEO friendly.</p></article>
+          <article class="service-card"><h3>Aplikasi Mobile</h3><p>Pembuatan aplikasi Android/iOS menggunakan Flutter dengan tampilan modern dan integrasi REST API.</p></article>
+          <article class="service-card"><h3>Sistem Informasi</h3><p>Dashboard admin, sistem akademik, HRIS, POS, approval system, dan sistem internal perusahaan.</p></article>
+          <article class="service-card"><h3>Backend API</h3><p>Pengembangan API menggunakan Laravel atau Golang, autentikasi, database, upload file, dan dokumentasi endpoint.</p></article>
+          <article class="service-card"><h3>Deployment Server</h3><p>Setup VPS, Nginx, SSL, domain, database, CI/CD sederhana, dan publikasi aplikasi ke server production.</p></article>
+          <article class="service-card"><h3>Maintenance</h3><p>Perbaikan bug, optimasi performa, update fitur, backup data, dan pendampingan teknis setelah aplikasi berjalan.</p></article>
         </div>
       </div>
     </section>
@@ -100,21 +82,9 @@
           <h2>Contoh project yang bisa dibuat</h2>
         </div>
         <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <span>01</span>
-            <h3>Company Profile</h3>
-            <p>Website bisnis profesional dengan halaman profil, layanan, portfolio, dan kontak WhatsApp.</p>
-          </div>
-          <div class="portfolio-item">
-            <span>02</span>
-            <h3>POS (Point Of Sales)</h3>
-            <p>Sistem kasir untuk transaksi penjualan, manajemen produk, stok barang, laporan penjualan, dan dashboard admin.</p>
-          </div>
-          <div class="portfolio-item">
-            <span>03</span>
-            <h3>HRIS / ESS Mobile</h3>
-            <p>Absensi, pengajuan, approval, notifikasi, dan laporan berbasis mobile app.</p>
-          </div>
+          <div class="portfolio-item"><span>01</span><h3>Company Profile</h3><p>Website bisnis profesional dengan halaman profil, layanan, portfolio, dan kontak project.</p></div>
+          <div class="portfolio-item"><span>02</span><h3>POS (Point Of Sales)</h3><p>Sistem kasir untuk transaksi penjualan, manajemen produk, stok barang, laporan penjualan, dan dashboard admin.</p></div>
+          <div class="portfolio-item"><span>03</span><h3>HRIS / ESS Mobile</h3><p>Absensi, pengajuan, approval, notifikasi, dan laporan berbasis mobile app.</p></div>
         </div>
       </div>
     </section>
@@ -135,16 +105,45 @@
     </section>
 
     <section class="cta" id="contact">
-      <div class="container cta-box">
+      <div class="container cta-box contact-grid">
         <div>
           <p class="badge">Hubungi Kami</p>
-          <h2>Siap membuat website atau aplikasi untuk bisnis Anda?</h2>
-          <p>Konsultasikan kebutuhan project Anda bersama FLTech.</p>
+          <h2>Konsultasikan kebutuhan project Anda</h2>
+          <p>Isi form berikut. Data akan tersimpan dan FLTech akan menerima notifikasi project baru secara real-time.</p>
         </div>
-        <div class="contact-actions">
-          <a class="btn primary" href="https://wa.me/6281234567890?text=Halo%20FLTech,%20saya%20ingin%20konsultasi%20project" target="_blank">Chat WhatsApp</a>
-          <a class="btn secondary" href="mailto:hello@fltech.my.id">Email Kami</a>
-        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required />
+          </div>
+          <div class="form-row">
+            <label for="company">Perusahaan / Instansi</label>
+            <input type="text" id="company" name="company" placeholder="Opsional" />
+          </div>
+          <div class="form-row">
+            <label for="project_type">Jenis Project</label>
+            <select id="project_type" name="project_type" required>
+              <option value="">Pilih jenis project</option>
+              <option value="Website Profesional">Website Profesional</option>
+              <option value="Aplikasi Mobile">Aplikasi Mobile</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+              <option value="Backend API">Backend API</option>
+              <option value="Deployment Server">Deployment Server</option>
+              <option value="Maintenance">Maintenance</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Kebutuhan Project</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan project Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn primary submit-btn" id="submitBtn">Kirim Konsultasi</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
       </div>
     </section>
   </main>
